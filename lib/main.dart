@@ -1,5 +1,7 @@
 // ignore_for_file: prefer_const_constructors
 
+import 'dart:html';
+
 import 'package:flutter/material.dart';
 
 void main() {
@@ -64,8 +66,27 @@ class FacebookApp extends StatelessWidget {
         ), */
 
       ),
-    floatingActionButton: FloatingActionButton(onPressed: (){},
-    child: const Icon(Icons.add
+      floatingActionButton: FloatingActionButton(onPressed: (){},
+    child: const Icon(Icons.add),
+    ),
+    // ignore: sort_child_properties_last
+    body: Container(child: Text('i make a beautiful App for learning flutter with a lot of passion',
+    style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold ),
+                          
+    ),
+    //color: Colors.blue[100],
+    margin: EdgeInsets.fromLTRB(20, 10, 10, 5),
+    padding: EdgeInsets.all(20),
+    height: 400,
+    width: 800,
+    alignment: Alignment.center,
+    transform: Matrix4.rotationZ(0.04),
+    decoration: BoxDecoration(
+      border: Border.all(color: Colors.red, width: 12,  ),
+      //borderRadius: BorderRadius.circular(25),
+      shape: BoxShape.circle,
+    ),
+
     ),
     );
   }
