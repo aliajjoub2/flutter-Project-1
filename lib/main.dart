@@ -36,19 +36,24 @@ class FacebookApp extends StatelessWidget {
           onPressed: () {},
           icon: Icon(Icons.menu),
           color: Colors.blue,
+          iconSize: 33,
         ),
         actions: [
           IconButton(
             onPressed: () {},
             icon: Icon(Icons.search),
             color: Colors.blueAccent,
+            iconSize: 33,
           ),
           IconButton(
             onPressed: () {},
             icon: Icon(Icons.message),
             color: Colors.blue,
+            iconSize: 33,
           )
         ],
+
+      elevation: 20,
 
         /* Icon(Icons.menu,
                       color: Colors.pink,
@@ -57,7 +62,11 @@ class FacebookApp extends StatelessWidget {
 
         
         ), */
+
       ),
+    floatingActionButton: FloatingActionButton(onPressed: (){},
+    child: const Icon(Icons.add
+    ),
     );
   }
 }
