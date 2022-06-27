@@ -70,7 +70,7 @@ class FacebookApp extends StatelessWidget {
     child: const Icon(Icons.add),
     ),
     // ignore: sort_child_properties_last
-    body: Container(child: Text('i make a beautiful App for learning flutter with a lot of passion',
+    body: Container(child: Text('i make a beautiful App ',
     style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold ),
                           
     ),
