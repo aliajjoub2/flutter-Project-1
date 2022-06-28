@@ -69,22 +69,45 @@ class FacebookApp extends StatelessWidget {
           child: const Icon(Icons.add),
         ),
         // ignore: sort_child_properties_last
-        body: SingleChildScrollView(
-          padding: EdgeInsets.fromLTRB(10, 0, 10, 0),
-          child:  Column(
+        body: Column(
+          children: [
+            Container(
+              // ignore: sort_child_properties_last
+              child: Text('here Ali', style: TextStyle(color: Colors.black, fontSize: 22, fontWeight: FontWeight.bold),),
+              height: 322,
+              width: double.infinity,
+              alignment: Alignment.center,
+              
+              //color: Colors.red,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(22),
+                color: Colors.red[200],
+              ),
+            ),
+            Row(
+
+            ),
+          ],
+        )
+        
+        
+         /* SingleChildScrollView(
+          //padding: EdgeInsets.fromLTRB(10, 0, 10, 0),
+          scrollDirection: Axis.horizontal,
+          child:  Row(
           // ignore: sort_child_properties_last
           children: [
             Container(
               // ignore: sort_child_properties_last
               child: Text(
-                ' App ',
+                ' Ali ',
                 style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
               ),
               //color: Colors.blue[100],
-              margin: EdgeInsets.fromLTRB(20, 10, 10, 5),
-              padding: EdgeInsets.all(20),
+               margin: EdgeInsets.fromLTRB(20, 10, 10, 5),
+              padding: EdgeInsets.all(2),
               height: 100,
-              width: 400,
+              width: 100,
               alignment: Alignment.center,
               //transform: Matrix4.rotationZ(0.04),
               decoration: BoxDecoration(
@@ -93,10 +116,10 @@ class FacebookApp extends StatelessWidget {
                   width: 12,
                 ),
                 //borderRadius: BorderRadius.circular(25),
-                //shape: BoxShape.circle,
+                shape: BoxShape.circle,
               ),
             ),
-             SizedBox(height: 100,),
+             //SizedBox(height: 10, width: 1,),
              Container(
               // ignore: sort_child_properties_last
               child: Text(
@@ -104,10 +127,10 @@ class FacebookApp extends StatelessWidget {
                 style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
               ),
               //color: Colors.blue[100],
-              margin: EdgeInsets.fromLTRB(20, 10, 10, 5),
-              padding: EdgeInsets.all(20),
+              //margin: EdgeInsets.fromLTRB(20, 1, 1, 1),
+              padding: EdgeInsets.all(2),
               height: 100,
-              width: 200,
+              width: 100,
               alignment: Alignment.center,
               transform: Matrix4.rotationZ(0.04),
               decoration: BoxDecoration(
@@ -119,18 +142,18 @@ class FacebookApp extends StatelessWidget {
                 shape: BoxShape.circle,
               ),
             ),
-              SizedBox(height: 100,),
+              SizedBox(height: 10,),
              Container(
               // ignore: sort_child_properties_last
               child: Text(
-                ' App ',
+                ' Ap',
                 style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
               ),
               //color: Colors.blue[100],
               margin: EdgeInsets.fromLTRB(20, 10, 10, 5),
-              padding: EdgeInsets.all(20),
-              height: 100,
-              width: 200,
+              padding: EdgeInsets.all(2),
+             height: 100,
+              width: 100,
               alignment: Alignment.center,
               transform: Matrix4.rotationZ(0.04),
               decoration: BoxDecoration(
@@ -142,7 +165,7 @@ class FacebookApp extends StatelessWidget {
                 shape: BoxShape.circle,
               ),
             ),
-             SizedBox(height: 260,),
+             SizedBox(height: 26,),
              Container(
               // ignore: sort_child_properties_last
               child: Text(
@@ -151,9 +174,9 @@ class FacebookApp extends StatelessWidget {
               ),
               //color: Colors.blue[100],
               margin: EdgeInsets.fromLTRB(20, 10, 10, 5),
-              padding: EdgeInsets.all(20),
-              height: 100,
-              width: 200,
+              padding: EdgeInsets.all(2),
+             height: 100,
+              width: 100,
               alignment: Alignment.center,
               transform: Matrix4.rotationZ(0.04),
               decoration: BoxDecoration(
@@ -171,7 +194,7 @@ class FacebookApp extends StatelessWidget {
         //crossAxisAlignment: CrossAxisAlignment.start,
         
         ),
-        )
+        ) */
         );
   }
 }
