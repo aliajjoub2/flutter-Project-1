@@ -27,8 +27,7 @@ class FacebookApp extends StatelessWidget {
       style: TextStyle(
           color: Colors.blue[700], fontWeight: FontWeight.bold, fontSize: 33),
     );
-    
-    
+
     return Scaffold(
         appBar: AppBar(
           backgroundColor: Colors.white,
@@ -69,132 +68,209 @@ class FacebookApp extends StatelessWidget {
           child: const Icon(Icons.add),
         ),
         // ignore: sort_child_properties_last
-        body: Column(
-          children: [
-            Container(
-              // ignore: sort_child_properties_last
-              child: Text('here Ali', style: TextStyle(color: Colors.black, fontSize: 22, fontWeight: FontWeight.bold),),
-              height: 322,
-              width: double.infinity,
-              alignment: Alignment.center,
-              
-              //color: Colors.red,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(22),
-                color: Colors.red[200],
-              ),
-            ),
-            Row(
+        body: SingleChildScrollView(
+          child: Column(
+            children: [
+              Container(
+                // ignore: sort_child_properties_last
+                child: Text(
+                  'here Ali',
+                  style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 22,
+                      fontWeight: FontWeight.bold),
+                ),
+                height: 322,
+                width: double.infinity,
+                alignment: Alignment.center,
 
-            ),
-          ],
-        )
-        
-        
-         /* SingleChildScrollView(
-          //padding: EdgeInsets.fromLTRB(10, 0, 10, 0),
-          scrollDirection: Axis.horizontal,
-          child:  Row(
-          // ignore: sort_child_properties_last
-          children: [
-            Container(
-              // ignore: sort_child_properties_last
-              child: Text(
-                ' Ali ',
-                style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
-              ),
-              //color: Colors.blue[100],
-               margin: EdgeInsets.fromLTRB(20, 10, 10, 5),
-              padding: EdgeInsets.all(2),
-              height: 100,
-              width: 100,
-              alignment: Alignment.center,
-              //transform: Matrix4.rotationZ(0.04),
-              decoration: BoxDecoration(
-                border: Border.all(
-                  color: Colors.red,
-                  width: 12,
+                //color: Colors.red,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(22),
+                  color: Colors.red[200],
                 ),
-                //borderRadius: BorderRadius.circular(25),
-                shape: BoxShape.circle,
               ),
-            ),
-             //SizedBox(height: 10, width: 1,),
-             Container(
-              // ignore: sort_child_properties_last
-              child: Text(
-                ' App ',
-                style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
-              ),
-              //color: Colors.blue[100],
-              //margin: EdgeInsets.fromLTRB(20, 1, 1, 1),
-              padding: EdgeInsets.all(2),
-              height: 100,
-              width: 100,
-              alignment: Alignment.center,
-              transform: Matrix4.rotationZ(0.04),
-              decoration: BoxDecoration(
-                border: Border.all(
-                  color: Colors.red,
-                  width: 12,
+              SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                child: Row(
+                  children: [
+                    Container(
+                      // ignore: sort_child_properties_last
+                      child: Text(
+                        ' Ali ',
+                        style: TextStyle(
+                            fontSize: 30, fontWeight: FontWeight.bold),
+                      ),
+                      //color: Colors.blue[100],
+                      margin: EdgeInsets.fromLTRB(20, 10, 10, 5),
+                      padding: EdgeInsets.all(2),
+                      height: 100,
+                      width: 100,
+                      alignment: Alignment.center,
+                      //transform: Matrix4.rotationZ(0.04),
+                      decoration: BoxDecoration(
+                        border: Border.all(
+                          color: Colors.red,
+                          width: 12,
+                        ),
+                        //borderRadius: BorderRadius.circular(25),
+                        shape: BoxShape.circle,
+                      ),
+                    ),
+                    Container(
+                      // ignore: sort_child_properties_last
+                      child: Text(
+                        ' Ali ',
+                        style: TextStyle(
+                            fontSize: 30, fontWeight: FontWeight.bold),
+                      ),
+                      //color: Colors.blue[100],
+                      margin: EdgeInsets.fromLTRB(20, 10, 10, 5),
+                      padding: EdgeInsets.all(2),
+                      height: 100,
+                      width: 100,
+                      alignment: Alignment.center,
+                      //transform: Matrix4.rotationZ(0.04),
+                      decoration: BoxDecoration(
+                        border: Border.all(
+                          color: Colors.red,
+                          width: 12,
+                        ),
+                        //borderRadius: BorderRadius.circular(25),
+                        shape: BoxShape.circle,
+                      ),
+                    ),
+                    Container(
+                      // ignore: sort_child_properties_last
+                      child: Text(
+                        ' Ali ',
+                        style: TextStyle(
+                            fontSize: 30, fontWeight: FontWeight.bold),
+                      ),
+                      //color: Colors.blue[100],
+                      margin: EdgeInsets.fromLTRB(20, 10, 10, 5),
+                      padding: EdgeInsets.all(2),
+                      height: 100,
+                      width: 100,
+                      alignment: Alignment.center,
+                      //transform: Matrix4.rotationZ(0.04),
+                      decoration: BoxDecoration(
+                        border: Border.all(
+                          color: Colors.red,
+                          width: 12,
+                        ),
+                        //borderRadius: BorderRadius.circular(25),
+                        shape: BoxShape.circle,
+                      ),
+                    ),
+                    Container(
+                      // ignore: sort_child_properties_last
+                      child: Text(
+                        ' Ali ',
+                        style: TextStyle(
+                            fontSize: 30, fontWeight: FontWeight.bold),
+                      ),
+                      //color: Colors.blue[100],
+                      margin: EdgeInsets.fromLTRB(20, 10, 10, 5),
+                      padding: EdgeInsets.all(2),
+                      height: 100,
+                      width: 100,
+                      alignment: Alignment.center,
+                      //transform: Matrix4.rotationZ(0.04),
+                      decoration: BoxDecoration(
+                        border: Border.all(
+                          color: Colors.red,
+                          width: 12,
+                        ),
+                        //borderRadius: BorderRadius.circular(25),
+                        shape: BoxShape.circle,
+                      ),
+                    ),
+                  ],
                 ),
-                //borderRadius: BorderRadius.circular(25),
-                shape: BoxShape.circle,
               ),
-            ),
-              SizedBox(height: 10,),
-             Container(
-              // ignore: sort_child_properties_last
-              child: Text(
-                ' Ap',
-                style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
-              ),
-              //color: Colors.blue[100],
-              margin: EdgeInsets.fromLTRB(20, 10, 10, 5),
-              padding: EdgeInsets.all(2),
-             height: 100,
-              width: 100,
-              alignment: Alignment.center,
-              transform: Matrix4.rotationZ(0.04),
-              decoration: BoxDecoration(
-                border: Border.all(
-                  color: Colors.red,
-                  width: 12,
+              Container(
+                // ignore: sort_child_properties_last
+                child: Text(
+                  'here Ali',
+                  style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 22,
+                      fontWeight: FontWeight.bold),
                 ),
-                //borderRadius: BorderRadius.circular(25),
-                shape: BoxShape.circle,
-              ),
-            ),
-             SizedBox(height: 26,),
-             Container(
-              // ignore: sort_child_properties_last
-              child: Text(
-                ' App ',
-                style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
-              ),
-              //color: Colors.blue[100],
-              margin: EdgeInsets.fromLTRB(20, 10, 10, 5),
-              padding: EdgeInsets.all(2),
-             height: 100,
-              width: 100,
-              alignment: Alignment.center,
-              transform: Matrix4.rotationZ(0.04),
-              decoration: BoxDecoration(
-                border: Border.all(
-                  color: Colors.red,
-                  width: 12,
+                height: 322,
+                width: double.infinity,
+                alignment: Alignment.center,
+
+                //color: Colors.red,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(22),
+                  color: Colors.red[200],
                 ),
-                //borderRadius: BorderRadius.circular(25),
-                shape: BoxShape.circle,
               ),
-            ),
-           //IconButton(onPressed: (){}, icon: Icon(Icons.search_off)),
-          ],
-        //mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        //crossAxisAlignment: CrossAxisAlignment.start,
-        
-        ),
-        ) */
-        );
+              Container(
+                // ignore: sort_child_properties_last
+                child: Row(
+                  children: [
+                    Expanded(
+                        flex: 0,
+                        child: Container(
+                          // ignore: sort_child_properties_last
+                          child: Text(
+                            '1',
+                            style: TextStyle(
+                                fontSize: 22, fontWeight: FontWeight.bold),
+                          ),
+
+                          width: 100,
+                          height: 100,
+                          color: Color.fromARGB(255, 236, 96, 117),
+                          alignment: Alignment.center,
+                        )),
+                    Expanded(
+                        flex: 1,
+                        child: Container(
+                          // ignore: sort_child_properties_last
+                          child: Text(
+                            '2',
+                            style: TextStyle(
+                                fontSize: 22, fontWeight: FontWeight.bold),
+                          ),
+
+                          width: 100,
+                          height: 100,
+                          color: Color.fromARGB(255, 179, 153, 240),
+                          alignment: Alignment.center,
+                        )),
+                    Expanded(
+                        flex: 0,
+                        child: Container(
+                          // ignore: sort_child_properties_last
+                          child: Text(
+                            '3',
+                            style: TextStyle(
+                                fontSize: 22, fontWeight: FontWeight.bold),
+                          ),
+
+                          width: 100,
+                          height: 100,
+                          color: Color.fromARGB(255, 236, 96, 117),
+                          alignment: Alignment.center,
+                        )),
+                  ],
+                ),
+                height: 322,
+                width: double.infinity,
+                alignment: Alignment.center,
+                margin: EdgeInsets.only(top: 20),
+                //color: Colors.red,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(22),
+                  color: Colors.red[200],
+                ),
+              ),
+            ],
+          ),
+        ));
   }
 }
