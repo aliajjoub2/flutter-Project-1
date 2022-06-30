@@ -278,19 +278,18 @@ class FacebookApp extends StatelessWidget {
                     child: Stack(
                       // unpositioned Box get Width and Height Parent as the first container
                       fit: StackFit.expand,
-                    
+
                       // position unpositioned Box change withe this Property
                       //alignment: AlignmentDirectional.bottomStart,
-                    // here clipBehavior to exit the box out the parents Box
-                    // hardEdge for clip and none for not clip
-                      clipBehavior: Clip.none , children: [
-
+                      // here clipBehavior to exit the box out the parents Box
+                      // hardEdge for clip and none for not clip
+                      clipBehavior: Clip.none,
+                      children: [
                         Container(
-                          // get the parent width and Height becoaus the fit expand property
-                          width: 100,
-                          height: 100,
-                          color: Color.fromARGB(255, 245, 232, 196)
-                        ),
+                            // get the parent width and Height becoaus the fit expand property
+                            width: 100,
+                            height: 100,
+                            color: Color.fromARGB(255, 245, 232, 196)),
                         // ignore: sort_child_properties_last
                         Positioned(
                           // ignore: sort_child_properties_last
@@ -305,7 +304,7 @@ class FacebookApp extends StatelessWidget {
                                   fontSize: 22, fontWeight: FontWeight.bold),
                             ),
                           ),
-                         bottom: 0,
+                          bottom: 0,
                         ),
                         Positioned(
                           // ignore: sort_child_properties_last
@@ -355,7 +354,6 @@ class FacebookApp extends StatelessWidget {
                           ),
                           top: -40,
                           left: -20,
-                          
                         ),
                         Center(
                           child: Container(
@@ -379,6 +377,129 @@ class FacebookApp extends StatelessWidget {
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(22),
                       color: Colors.red[200],
+                    ),
+                  ),
+                  Padding(
+                    
+                    padding: const EdgeInsets.all(8.0),
+                    child: Container(
+                      margin: EdgeInsets.all(10),
+                      width: 250,
+                      height: 350,
+                      color: Colors.red[200],
+                      child: Center(
+                        child: Wrap(
+                          direction: Axis.vertical,
+                          spacing: 10.2,
+                          runSpacing: 13.5,
+                          children: [
+                            ElevatedButton(
+                              onPressed: () {},
+                              style: ButtonStyle(
+                                backgroundColor: MaterialStateProperty.all(
+                                    Color.fromARGB(146, 90, 104, 223)),
+                                padding:
+                                    MaterialStateProperty.all(EdgeInsets.all(22)),
+                                shape: MaterialStateProperty.all(
+                                    RoundedRectangleBorder(
+                                        borderRadius: BorderRadius.circular(12))),
+                              ),
+                              child: Text("1"),
+                            ),
+                            ElevatedButton.icon(
+                              onPressed: () {},
+                              icon: Icon(
+                                Icons.edit_location,
+                                color: Color.fromARGB(255, 255, 129, 129),
+                                size: 24.0,
+                              ),
+                              label: Text(
+                                "Ed",
+                                style: TextStyle(fontSize: 19),
+                              ),
+                              style: ButtonStyle(
+                                backgroundColor: MaterialStateProperty.all(
+                                    Color.fromARGB(146, 90, 104, 223)),
+                                padding:
+                                    MaterialStateProperty.all(EdgeInsets.all(22)),
+                                shape: MaterialStateProperty.all(
+                                    RoundedRectangleBorder(
+                                        borderRadius: BorderRadius.circular(12))),
+                              ),
+                            ),
+                            ElevatedButton(
+                              onPressed: () {},
+                              child: Text("2"),
+                              style: ButtonStyle(
+                                backgroundColor: MaterialStateProperty.all(
+                                    Color.fromARGB(146, 90, 104, 223)),
+                                padding:
+                                    MaterialStateProperty.all(EdgeInsets.all(22)),
+                                shape: MaterialStateProperty.all(
+                                    RoundedRectangleBorder(
+                                        borderRadius: BorderRadius.circular(12))),
+                              ),
+                            ),
+                            ElevatedButton(
+                              onPressed: () {},
+                              child: Text("3"),
+                              style: ButtonStyle(
+                                backgroundColor: MaterialStateProperty.all(
+                                    Color.fromARGB(146, 90, 104, 223)),
+                                padding:
+                                    MaterialStateProperty.all(EdgeInsets.all(22)),
+                                shape: MaterialStateProperty.all(
+                                    RoundedRectangleBorder(
+                                        borderRadius: BorderRadius.circular(12))),
+                              ),
+                            ),
+                            ElevatedButton.icon(
+                              onPressed: () {},
+                              icon: Icon(
+                                Icons.edit_location,
+                                color: Color.fromARGB(255, 255, 129, 129),
+                                size: 24.0,
+                              ),
+                              label: Text(
+                                "Ed",
+                                style: TextStyle(fontSize: 19),
+                              ),
+                              style: ButtonStyle(
+                                backgroundColor: MaterialStateProperty.all(
+                                    Color.fromARGB(146, 90, 104, 223)),
+                                padding:
+                                    MaterialStateProperty.all(EdgeInsets.all(22)),
+                                shape: MaterialStateProperty.all(
+                                    RoundedRectangleBorder(
+                                        borderRadius: BorderRadius.circular(12))),
+                              ),
+                            ),
+                            ElevatedButton(
+                              onPressed: () {},
+                              child: Text("4"),
+                              style: ButtonStyle(
+                                backgroundColor: MaterialStateProperty.all(
+                                    Color.fromARGB(146, 90, 104, 223)),
+                                padding:
+                                    MaterialStateProperty.all(EdgeInsets.all(22)),
+                                shape: MaterialStateProperty.all(
+                                    RoundedRectangleBorder(
+                                        borderRadius: BorderRadius.circular(12))),
+                              ),
+                            ),
+                            TextButton.icon(
+                              onPressed: () {},
+                              icon: Icon(
+                                Icons.person,
+                                color: Colors.black,
+                                size: 24.0,
+                              ),
+                              label: Text('Logout',
+                                  style: TextStyle(color: Colors.black)),
+                            ),
+                          ],
+                        ),
+                      ),
                     ),
                   ),
                 ],
