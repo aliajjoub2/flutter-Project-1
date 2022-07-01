@@ -509,6 +509,44 @@ class FacebookApp extends StatelessWidget {
                 width: 80,
                 height: 80,
                 ),
+
+                // start Task
+                Container(
+                  width: double.infinity,
+                  height: 670,
+                  color: Colors.red[100],
+                  child: Column(
+                    
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    // ignore: prefer_const_literals_to_create_immutables
+                    children: [
+                      Container(
+                        padding: EdgeInsets.only(top: 20),
+                        child: Text("task Svg",
+                         style: TextStyle(fontSize: 22,
+                          fontFamily: "myArima",
+                          fontWeight: FontWeight.bold),)),
+                      Container(
+                        padding: EdgeInsets.only(bottom: 20),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            SvgPicture.asset('assets/img/face.svg',
+                            ),
+                            Container(
+                              padding: EdgeInsets.fromLTRB(20, 0, 20, 0),
+                              child: SvgPicture.asset('assets/img/face.svg',
+                              ),
+                            ),
+                            SvgPicture.asset('assets/img/face.svg',
+                            ),
+                          ],
+                        ),
+                      ),
+                      
+                    ],
+                  ),
+                ),
                 ];
     return Scaffold(
         appBar: AppBar(
