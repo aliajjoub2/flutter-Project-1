@@ -380,7 +380,6 @@ class FacebookApp extends StatelessWidget {
                     ),
                   ),
                   Padding(
-                    
                     padding: const EdgeInsets.all(8.0),
                     child: Container(
                       margin: EdgeInsets.all(10),
@@ -398,13 +397,18 @@ class FacebookApp extends StatelessWidget {
                               style: ButtonStyle(
                                 backgroundColor: MaterialStateProperty.all(
                                     Color.fromARGB(146, 90, 104, 223)),
-                                padding:
-                                    MaterialStateProperty.all(EdgeInsets.all(22)),
+                                padding: MaterialStateProperty.all(
+                                    EdgeInsets.all(22)),
                                 shape: MaterialStateProperty.all(
                                     RoundedRectangleBorder(
-                                        borderRadius: BorderRadius.circular(12))),
+                                        borderRadius:
+                                            BorderRadius.circular(12))),
                               ),
-                              child: Text("1"),
+                              child: Text(
+                                " myArima",
+                                style: TextStyle(
+                                    fontFamily: "myArima", fontSize: 19),
+                              ),
                             ),
                             ElevatedButton.icon(
                               onPressed: () {},
@@ -414,44 +418,48 @@ class FacebookApp extends StatelessWidget {
                                 size: 24.0,
                               ),
                               label: Text(
-                                "Ed",
-                                style: TextStyle(fontSize: 19),
+                                "Edurd",
+                                style: TextStyle(
+                                    fontSize: 19, fontFamily: "myArima"),
                               ),
                               style: ButtonStyle(
                                 backgroundColor: MaterialStateProperty.all(
                                     Color.fromARGB(146, 90, 104, 223)),
-                                padding:
-                                    MaterialStateProperty.all(EdgeInsets.all(22)),
+                                padding: MaterialStateProperty.all(
+                                    EdgeInsets.all(22)),
                                 shape: MaterialStateProperty.all(
                                     RoundedRectangleBorder(
-                                        borderRadius: BorderRadius.circular(12))),
+                                        borderRadius:
+                                            BorderRadius.circular(12))),
                               ),
                             ),
                             ElevatedButton(
+                              style: ButtonStyle(
+                                backgroundColor: MaterialStateProperty.all(
+                                    Color.fromARGB(146, 90, 104, 223)),
+                                padding: MaterialStateProperty.all(
+                                    EdgeInsets.all(22)),
+                                shape: MaterialStateProperty.all(
+                                    RoundedRectangleBorder(
+                                        borderRadius:
+                                            BorderRadius.circular(12))),
+                              ),
                               onPressed: () {},
                               child: Text("2"),
-                              style: ButtonStyle(
-                                backgroundColor: MaterialStateProperty.all(
-                                    Color.fromARGB(146, 90, 104, 223)),
-                                padding:
-                                    MaterialStateProperty.all(EdgeInsets.all(22)),
-                                shape: MaterialStateProperty.all(
-                                    RoundedRectangleBorder(
-                                        borderRadius: BorderRadius.circular(12))),
-                              ),
                             ),
                             ElevatedButton(
-                              onPressed: () {},
-                              child: Text("3"),
                               style: ButtonStyle(
                                 backgroundColor: MaterialStateProperty.all(
                                     Color.fromARGB(146, 90, 104, 223)),
-                                padding:
-                                    MaterialStateProperty.all(EdgeInsets.all(22)),
+                                padding: MaterialStateProperty.all(
+                                    EdgeInsets.all(22)),
                                 shape: MaterialStateProperty.all(
                                     RoundedRectangleBorder(
-                                        borderRadius: BorderRadius.circular(12))),
+                                        borderRadius:
+                                            BorderRadius.circular(12))),
                               ),
+                              onPressed: () {},
+                              child: Text("3"),
                             ),
                             ElevatedButton.icon(
                               onPressed: () {},
@@ -467,25 +475,27 @@ class FacebookApp extends StatelessWidget {
                               style: ButtonStyle(
                                 backgroundColor: MaterialStateProperty.all(
                                     Color.fromARGB(146, 90, 104, 223)),
-                                padding:
-                                    MaterialStateProperty.all(EdgeInsets.all(22)),
+                                padding: MaterialStateProperty.all(
+                                    EdgeInsets.all(22)),
                                 shape: MaterialStateProperty.all(
                                     RoundedRectangleBorder(
-                                        borderRadius: BorderRadius.circular(12))),
+                                        borderRadius:
+                                            BorderRadius.circular(12))),
                               ),
                             ),
                             ElevatedButton(
-                              onPressed: () {},
-                              child: Text("4"),
                               style: ButtonStyle(
                                 backgroundColor: MaterialStateProperty.all(
                                     Color.fromARGB(146, 90, 104, 223)),
-                                padding:
-                                    MaterialStateProperty.all(EdgeInsets.all(22)),
+                                padding: MaterialStateProperty.all(
+                                    EdgeInsets.all(22)),
                                 shape: MaterialStateProperty.all(
                                     RoundedRectangleBorder(
-                                        borderRadius: BorderRadius.circular(12))),
+                                        borderRadius:
+                                            BorderRadius.circular(12))),
                               ),
+                              onPressed: () {},
+                              child: Text("4"),
                             ),
                             TextButton.icon(
                               onPressed: () {},
@@ -500,6 +510,40 @@ class FacebookApp extends StatelessWidget {
                           ],
                         ),
                       ),
+                    ),
+                  ),
+                  ClipRRect(
+                    borderRadius: BorderRadius.circular(22),
+                    child: Image.asset(
+                      "assets/img/abb2.png",
+                      fit: BoxFit.fill,
+                      width: 300,
+                      height: 300,
+                    ),
+                  ),
+                  ClipRRect(
+                    borderRadius: BorderRadius.circular(22),
+                    child: Image.network(
+                      "https://cdn.britannica.com/42/185042-050-05CC5047/World-Data-export-destinations-pie-chart-Syria.jpg",
+                      fit: BoxFit.cover,
+                      width: 300,
+                      height: 300,
+                      loadingBuilder: (context, child, progress) {
+                        return progress == null
+                            ? child
+                            : Center(child: CircularProgressIndicator());
+                      },
+                    ),
+                  ),
+                  CircleAvatar(
+                    backgroundImage: AssetImage("assets/img/abb2.png"),
+                    radius: 50,
+                  ),
+                  CircleAvatar(
+                    radius: 20,
+                    //the image  muss be square
+                    child: ClipOval(
+                      child: Image.asset("assets/img/abb2.png"),
                     ),
                   ),
                 ],
