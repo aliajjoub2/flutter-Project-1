@@ -536,19 +536,20 @@ class FacebookApp extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.end,
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                 Container(
-                  child: CircleAvatar(
-                    backgroundImage: AssetImage("assets/img/meinfoto.jpg"),
-                    radius: 77,
+                  // ignore: avoid_unnecessary_containers
+                  Container(
+                    child: CircleAvatar(
+                      backgroundImage: AssetImage("assets/img/meinfoto.jpg"),
+                      radius: 77,
+                    ),
                   ),
-                 ),
                   Icon(Icons.contacts),
                 ],
               ),
             ),
-            
+
             // ignore: avoid_unnecessary_containers
-           
+
             Container(
               color: Colors.amber[100],
               padding: EdgeInsets.only(left: 20),
@@ -560,13 +561,15 @@ class FacebookApp extends StatelessWidget {
                 // ignore: prefer_const_literals_to_create_immutables
                 children: [
                   Text("My Name:",
-                      style:
-                          TextStyle(fontSize: 25, fontWeight: FontWeight.bold,)),
+                      style: TextStyle(
+                        fontSize: 25,
+                        fontWeight: FontWeight.bold,
+                      )),
                   Container(
                     margin: EdgeInsets.only(top: 15, bottom: 15),
                     child: Text("Ali Ajjoub",
-                        style:
-                            TextStyle(fontSize: 30, fontWeight: FontWeight.bold)),
+                        style: TextStyle(
+                            fontSize: 30, fontWeight: FontWeight.bold)),
                   ),
                   Text("Study:",
                       style:
@@ -574,12 +577,104 @@ class FacebookApp extends StatelessWidget {
                   Container(
                     margin: EdgeInsets.only(top: 15, bottom: 15),
                     child: Text("Web Developer",
-                        style:
-                            TextStyle(fontSize: 30, fontWeight: FontWeight.bold)),
+                        style: TextStyle(
+                            fontSize: 30, fontWeight: FontWeight.bold)),
                   ),
                 ],
               ),
             ),
+          ],
+        ),
+      ),
+
+      // start input Typ and solution the task
+      Container(
+        width: double.infinity,
+        height: 600,
+        color: Colors.blue[100],
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          // ignore: prefer_const_literals_to_create_immutables
+          children: [
+            Container(
+              alignment: Alignment.center,
+              padding: EdgeInsets.only(left: 20),
+              margin: EdgeInsets.only(top: 20, bottom: 20),
+              width: 250,
+              height: 50,
+              decoration: BoxDecoration(
+                color: Colors.amber[100],
+                borderRadius: BorderRadius.circular(20),
+                border: Border.all(
+                  color: Colors.black26,
+                ),
+              ),
+              child: TextField(
+                textInputAction: TextInputAction.done,
+                obscureText: true,
+                keyboardType: TextInputType.emailAddress,
+                decoration: InputDecoration(
+                  prefixIcon: Icon(
+                    Icons.email,
+                    size: 25,
+                  ),
+                  //contentPadding: EdgeInsets.all(3),
+                  hintStyle: TextStyle(fontSize: 17),
+                  hintText: "Email",
+                  //labelText: "Email",
+
+                  //labelStyle: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
+                  //border: OutlineInputBorder(),
+                  border: InputBorder.none,
+                ),
+              ),
+            ),
+            Container(
+              alignment: Alignment.center,
+              padding: EdgeInsets.only(left: 20),
+              margin: EdgeInsets.only(top: 20, bottom: 20),
+              width: 250,
+              height: 50,
+              decoration: BoxDecoration(
+                color: Colors.amber[100],
+                borderRadius: BorderRadius.circular(20),
+                border: Border.all(
+                  color: Colors.black26,
+                ),
+              ),
+              child: TextField(
+                textInputAction: TextInputAction.done,
+                obscureText: true,
+                decoration: InputDecoration(
+                  //contentPadding: EdgeInsets.all(3),
+
+                  hintText: "Passport",
+                  prefixIcon: Icon(Icons.password),
+                  suffixIcon: Icon(Icons.visibility),
+                  //labelText: "Email",
+
+                  //labelStyle: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
+                  //border: OutlineInputBorder(),
+                  border: InputBorder.none,
+                ),
+              ),
+            ),
+            ElevatedButton(
+                style: ButtonStyle(
+                  backgroundColor: MaterialStateProperty.all(Colors.orange),
+                  padding: MaterialStateProperty.all(EdgeInsets.symmetric(horizontal: 100, vertical: 10)),
+                  shape: MaterialStateProperty.all(RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(20))),
+                ),
+                //minimumSize: Size(250, 36.0),
+                onPressed: () {},
+                
+                //side: BorderSide(),
+
+                child: const Text(
+                  "Enter",
+                  style: TextStyle(fontSize: 24, ),
+                ))
           ],
         ),
       ),
