@@ -521,7 +521,7 @@ class FacebookApp extends StatelessWidget {
       // ignore: avoid_unnecessary_containers
       // start ninja Card
       Container(
-        height: 400,
+        height: 500,
         width: double.infinity,
         margin: EdgeInsets.all(10),
         color: Colors.green[100],
@@ -552,22 +552,31 @@ class FacebookApp extends StatelessWidget {
             Container(
               color: Colors.amber[100],
               padding: EdgeInsets.only(left: 20),
+              height: 260,
+              width: double.infinity,
               child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 // ignore: prefer_const_literals_to_create_immutables
                 children: [
                   Text("My Name:",
                       style:
                           TextStyle(fontSize: 25, fontWeight: FontWeight.bold,)),
-                  Text("Ali Ajjoub",
-                      style:
-                          TextStyle(fontSize: 30, fontWeight: FontWeight.bold)),
+                  Container(
+                    margin: EdgeInsets.only(top: 15, bottom: 15),
+                    child: Text("Ali Ajjoub",
+                        style:
+                            TextStyle(fontSize: 30, fontWeight: FontWeight.bold)),
+                  ),
                   Text("Study:",
                       style:
                           TextStyle(fontSize: 25, fontWeight: FontWeight.bold)),
-                  Text("Web Developer",
-                      style:
-                          TextStyle(fontSize: 30, fontWeight: FontWeight.bold)),
+                  Container(
+                    margin: EdgeInsets.only(top: 15, bottom: 15),
+                    child: Text("Web Developer",
+                        style:
+                            TextStyle(fontSize: 30, fontWeight: FontWeight.bold)),
+                  ),
                 ],
               ),
             ),
