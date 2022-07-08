@@ -3,7 +3,9 @@
 //import 'dart:html';
 
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
+import 'package:syrianeconomy/pages/login.dart';
+import 'package:syrianeconomy/pages/signup.dart';
+import 'package:syrianeconomy/pages/welcome.dart';
 
 void main() {
   runApp(const MyApp());
@@ -14,14 +16,22 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: FacebookApp(),
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
+      initialRoute: "/",
+      routes: {
+        "/": (context) => const Welcome(),
+        "/login": (context) => const Login(),
+        "/signup": (context) => const Signup(),
+      },
+
+      /*  home: FacebookApp(),
+       */
     );
   }
 }
 
-class FacebookApp extends StatelessWidget {
+/* class FacebookApp extends StatelessWidget {
   const FacebookApp({Key? key}) : super(key: key);
 
   @override
@@ -35,11 +45,7 @@ class FacebookApp extends StatelessWidget {
     var children2 = [
       Container(
         // ignore: sort_child_properties_last
-        child: Text(
-          'here Ali',
-          style: TextStyle(
-              color: Colors.black, fontSize: 22, fontWeight: FontWeight.bold),
-        ),
+
         height: 322,
         width: double.infinity,
         alignment: Alignment.center,
@@ -48,6 +54,11 @@ class FacebookApp extends StatelessWidget {
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(22),
           color: Colors.red[200],
+        ),
+        child: Text(
+          'here Ali',
+          style: TextStyle(
+              color: Colors.black, fontSize: 22, fontWeight: FontWeight.bold),
         ),
       ),
       SingleChildScrollView(
@@ -162,54 +173,8 @@ class FacebookApp extends StatelessWidget {
           color: Colors.red[200],
         ),
       ),
+      // Start expanded Widget
       Container(
-        // ignore: sort_child_properties_last
-        child: Row(
-          children: [
-            Expanded(
-                flex: 0,
-                child: Container(
-                  // ignore: sort_child_properties_last
-                  child: Text(
-                    '1',
-                    style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
-                  ),
-
-                  width: 100,
-                  height: 100,
-                  color: Color.fromARGB(255, 236, 96, 117),
-                  alignment: Alignment.center,
-                )),
-            Expanded(
-                flex: 1,
-                child: Container(
-                  // ignore: sort_child_properties_last
-                  child: Text(
-                    '2',
-                    style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
-                  ),
-
-                  width: 100,
-                  height: 100,
-                  color: Color.fromARGB(255, 179, 153, 240),
-                  alignment: Alignment.center,
-                )),
-            Expanded(
-                flex: 0,
-                child: Container(
-                  // ignore: sort_child_properties_last
-                  child: Text(
-                    '3',
-                    style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
-                  ),
-
-                  width: 100,
-                  height: 100,
-                  color: Color.fromARGB(255, 236, 96, 117),
-                  alignment: Alignment.center,
-                )),
-          ],
-        ),
         height: 322,
         width: double.infinity,
         alignment: Alignment.center,
@@ -219,15 +184,63 @@ class FacebookApp extends StatelessWidget {
           borderRadius: BorderRadius.circular(22),
           color: Colors.red[200],
         ),
+        child: Row(
+          children: [
+            Expanded(
+                flex: 0,
+                child: Container(
+                  width: 100,
+                  height: 100,
+                  color: Color.fromARGB(255, 236, 96, 117),
+                  alignment: Alignment.center,
+                  child: Text(
+                    '1',
+                    style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
+                  ),
+                )),
+            Expanded(
+                flex: 1,
+                child: Container(
+                  width: 100,
+                  height: 100,
+                  color: Color.fromARGB(255, 179, 153, 240),
+                  alignment: Alignment.center,
+                  child: Text(
+                    '2',
+                    style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
+                  ),
+                )),
+            Expanded(
+                flex: 0,
+                child: Container(
+                  width: 100,
+                  height: 100,
+                  color: Color.fromARGB(255, 236, 96, 117),
+                  alignment: Alignment.center,
+                  child: Text(
+                    '3',
+                    style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
+                  ),
+                )),
+          ],
+        ),
       ),
+      // start Stack Widget
       Container(
-        // ignore: sort_child_properties_last
+        width: 300,
+        height: 300,
+        margin: EdgeInsets.fromLTRB(0, 10, 0, 10),
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(22),
+          color: Colors.red[200],
+        ),
         child: Stack(
           // unpositioned Box get Width and Height Parent as the first container
           fit: StackFit.expand,
 
           // position unpositioned Box change withe this Property
           //alignment: AlignmentDirectional.bottomStart,
+          //---------
           // here clipBehavior to exit the box out the parents Box
           // hardEdge for clip and none for not clip
           clipBehavior: Clip.none,
@@ -314,14 +327,8 @@ class FacebookApp extends StatelessWidget {
           ],
         ),
         //padding: EdgeInsets.all(9),
-        width: 300,
-        height: 300,
-        margin: EdgeInsets.fromLTRB(0, 10, 0, 10),
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(22),
-          color: Colors.red[200],
-        ),
       ),
+      // Sart Wrap widget
       Padding(
         padding: const EdgeInsets.all(8.0),
         child: Container(
@@ -334,6 +341,8 @@ class FacebookApp extends StatelessWidget {
               direction: Axis.vertical,
               spacing: 10.2,
               runSpacing: 13.5,
+              alignment: WrapAlignment.center,
+              
               children: [
                 ElevatedButton(
                   onPressed: () {},
@@ -662,19 +671,22 @@ class FacebookApp extends StatelessWidget {
             ElevatedButton(
                 style: ButtonStyle(
                   backgroundColor: MaterialStateProperty.all(Colors.orange),
-                  padding: MaterialStateProperty.all(EdgeInsets.symmetric(horizontal: 100, vertical: 10)),
+                  padding: MaterialStateProperty.all(
+                      EdgeInsets.symmetric(horizontal: 100, vertical: 10)),
                   shape: MaterialStateProperty.all(RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(20))),
                 ),
                 //minimumSize: Size(250, 36.0),
                 onPressed: () {},
-                
+
                 //side: BorderSide(),
 
                 child: const Text(
                   "Enter",
-                  style: TextStyle(fontSize: 24, ),
-                ))
+                  style: TextStyle(
+                    fontSize: 24,
+                  ),
+                )),
           ],
         ),
       ),
@@ -684,19 +696,23 @@ class FacebookApp extends StatelessWidget {
           backgroundColor: Colors.white,
           title: text,
           centerTitle: true,
+          // start leading in right side get Icons
           leading: IconButton(
             onPressed: () {},
             icon: Icon(Icons.menu),
             color: Colors.blue,
             iconSize: 33,
           ),
+          // start action in links side get a Icons
           actions: [
+            // start search bottom
             IconButton(
               onPressed: () {},
               icon: Icon(Icons.search),
               color: Colors.blueAccent,
               iconSize: 33,
             ),
+            // start message Bottom
             IconButton(
               onPressed: () {},
               icon: Icon(Icons.message),
@@ -710,8 +726,6 @@ class FacebookApp extends StatelessWidget {
                       color: Colors.pink,
                       size: 24.0,
                       semanticLabel: 'Text to announce in accessibility modes',
-
-        
         ), */
         ),
         floatingActionButton: FloatingActionButton(
@@ -731,3 +745,4 @@ class FacebookApp extends StatelessWidget {
         ));
   }
 }
+ */
